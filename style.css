@@ -1,0 +1,40 @@
+/* Stili base */
+body {
+    font-family: sans-serif;
+}
+
+/* Glitch effect */
+.glitch-background {
+    /* ... (aggiungi qui lo stile per l'effetto glitch) */
+}
+
+/* Animazioni di testo */
+.text-animation {
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+/* Parallax image */
+.parallax-image {
+    /* ... (aggiungi qui lo stile per l'effetto parallax) */
+}
+
+/* Skill list */
+.skill-list li {
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.skill-list i {
+    margin-right: 10px;
+}
+
+/* Project carousel */
+.project-carousel {
+    /* ... (aggiungi qui lo stile per il carousel) */
+}
+
+/* Project overlay */
+.project-overlay {
+    /* ... (aggiungi qui lo stile per l'overlay) */
+}
