@@ -1,40 +1,66 @@
 /* Stili base */
 body {
     font-family: sans-serif;
+    background-color: #111; /* Sfondo scuro per evidenziare il glitch */
+    color: #fff; /* Testo bianco per il contrasto */
 }
 
 /* Glitch effect */
 .glitch-background {
-    /* ... (aggiungi qui lo stile per l'effetto glitch) */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("pexels-didsss-5104885.jpg"); /* Sostituisci con la tua immagine di glitch */
+    background-size: cover;
+    z-index: -1; /* Posiziona lo sfondo dietro al testo */
+    mix-blend-mode: screen; /* Modalità di fusione per l'effetto */
+    animation: glitch 2s infinite linear alternate; /* Animazione glitch */
+}
+
+@keyframes glitch {
+    0% { background-position: 0 0; }
+    25% { background-position: 10px -5px; }
+    50% { background-position: -5px 15px; }
+    75% { background-position: 5px -10px; }
+    100% { background-position: 0 0; }
 }
 
 /* Animazioni di testo */
 .text-animation {
     opacity: 0;
     transform: translateY(50px);
-}
+} 
 
 /* Parallax image */
 .parallax-image {
-    /* ... (aggiungi qui lo stile per l'effetto parallax) */
-}
-
-/* Skill list */
-.skill-list li {
-    list-style: none;
-    margin-bottom: 10px;
-}
-
-.skill-list i {
-    margin-right: 10px;
-}
+    transform: translateZ(-1px) scale(1.1); /* Lieve profondità e ingrandimento */
+} 
 
 /* Project carousel */
 .project-carousel {
-    /* ... (aggiungi qui lo stile per il carousel) */
+    overflow-x: auto;
+    scroll-snap-type: x mandatory; /* Scroll a scatti */
+}
+
+.project-carousel .col-md-4 {
+    scroll-snap-align: start; /* Allinea i progetti all'inizio dello snap */
 }
 
 /* Project overlay */
 .project-overlay {
-    /* ... (aggiungi qui lo stile per l'overlay) */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Sfondo semitrasparente */
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.3s ease; /* Transizione per l'opacità */
+}
+
+.project:hover .project-overlay {
+    opacity: 1;
 }
