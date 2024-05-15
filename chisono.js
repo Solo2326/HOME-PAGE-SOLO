@@ -1,17 +1,18 @@
-gsap.from("chisono.html h2, chisono.html p", {
+gsap.from("h2, p", { // Tolto chisono.html per correggere l'errore
     opacity: 0,
     y: 50,
     duration: 1,
     scrollTrigger: {
-        trigger: "#chi-sono",
+        trigger: "#chi-sono", // ID della sezione
         start: "top center",
         end: "bottom center",
         scrub: true, 
     }
 });
+
 gsap.registerPlugin(ScrollTrigger);
 
-gsap.utils.toArray("chisono.html h2, chisono.html p, chisono.html .skill-list").forEach((elem) => {
+gsap.utils.toArray("h2, p, .skill-list").forEach((elem) => { // Tolto chisono.html per correggere l'errore
     gsap.from(elem, {
         opacity: 0,
         y: 50,
@@ -19,19 +20,19 @@ gsap.utils.toArray("chisono.html h2, chisono.html p, chisono.html .skill-list").
         ease: "power2.out",
         scrollTrigger: {
             trigger: elem,
-            start: "top center+=100",
+            start: "top center+=100", 
             toggleActions: "play none none reverse"
         }
     });
 });
 
-gsap.from("chisono.html .parallax-image", {
+gsap.from(".parallax-image", {  // Tolto chisono.html per correggere l'errore
     opacity: 0,
     x: -50,
     duration: 1.5,
     ease: "power2.out",
     scrollTrigger: {
-        trigger: "chisono.html .parallax-image",
+        trigger: ".parallax-image", // Classe dell'immagine
         start: "top center+=100",
         toggleActions: "play none none reverse"
     }
